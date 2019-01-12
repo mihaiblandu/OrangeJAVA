@@ -1,0 +1,88 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+          http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+          http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-3.1.xsd
+          http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+">
+    <context:annotation-config/>
+
+    <bean id="race" class="Entities.Race">
+        <property name = "name" value = "Race Name"/>
+    </bean>
+
+
+    <bean id="allyCommander" class="Entities.AllyCommander">
+        <property name = "name" value = "Ally Commander Name"/>
+        <property name = "health" value = "100"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="enemyCommander" class="Entities.EnemyCommander">
+        <property name = "name" value = "Enemy Commander Name"/>
+        <property name = "health" value = "100"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="allySoldier" class="Entities.AllySoldier">
+        <property name = "name" value = "Enemy Soldier Name"/>
+        <property name = "health" value = "100"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="enemySoldier" class="Entities.EnemySoldier">
+        <property name = "name" value = "Enemy Soldier Name"/>
+        <property name = "health" value = "100"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="allyMage" class="Entities.AllyMage">
+        <property name = "name" value = "AllyMage Name"/>
+        <property name = "health" value = "100"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name = "mana" value = "100"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="enemyWitch" class="Entities.EnemyWitch">
+        <property name = "name" value = "EnemyWitch Name"/>
+        <property name = "health" value = "100"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name = "mana" value = "100"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="allyDragon" class="Entities.AllyDragon">
+        <property name = "name" value = "Ally Dragon Name"/>
+        <property name = "health" value = "1000"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name="race" ref="race"/>
+    </bean>
+
+    <bean id="enemyDragon" class="Entities.EnemyDragon">
+        <property name = "name" value = "Enemy Dragon Name"/>
+        <property name = "health" value = "1000"/>
+        <property name = "level" value = "1"/>
+        <property name = "experience" value = "0"/>
+        <property name="race" ref="race"/>
+    </bean>
+</beans>

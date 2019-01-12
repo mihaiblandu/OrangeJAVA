@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * @author mihai
+ *
+ */
+package Patterns;
